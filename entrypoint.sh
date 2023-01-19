@@ -24,6 +24,6 @@ fi
 
 echo "running entrypoint command(s)"
 
-response=$(sh -c "$INPUT_COMMAND")
+response=$("$INPUT_COMMAND")
 
 echo "response=$response" >> $GITHUB_ENV
