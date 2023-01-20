@@ -39,5 +39,3 @@ runs:
       NAMESPACE: ${{ inputs.namespace }}
       ARGUMENTS: ${{ inputs.arguments }}
       EXTRA_ARGUMENTS: ${{ inputs.extra_arguments }}
-  args:
-    - ${{ inputs.command }}
