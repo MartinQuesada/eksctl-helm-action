@@ -16,8 +16,14 @@ inputs:
     cluster-name:
         description: 'EKS cluster name.'
         required: true
-    command:
-        description: "Your command (kubectl or helm)"
+    namespace:
+        description: 'Kubernetes namespace to use.'
+        required: true
+    arguments:
+        description: 'Helm arguments'
+        required: true    
+    extra_arguments:
+        description: 'Extra arguments'
         required: true
 outputs:
   result:
@@ -30,5 +36,8 @@ runs:
       AWS_SECRET_ACCESS_KEY: ${{ inputs.aws-secret-access-key }}
       AWS_ACCESS_KEY_ID: ${{ inputs.aws-access-key-id }}
       CLUSTER_NAME: ${{ inputs.cluster-name }}
+      NAMESPACE: ${{ inputs.namespace }}
+      ARGUMENTS: ${{ inputs.arguments }}
+      EXTRA_ARGUMENTS: ${{ inputs.extra_arguments }}
   args:
     - ${{ inputs.command }}

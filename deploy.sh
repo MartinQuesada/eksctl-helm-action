@@ -24,8 +24,4 @@ fi
 
 echo "running entrypoint command(s)"
 
-ps_cmd() {
-    $INPUT_COMMAND
-}
-
-ps_cmd
+helm ${ARGUMENTS} -n${NAMESPACE} ${EXTRA_ARGUMENTS}
