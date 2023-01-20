@@ -24,4 +24,4 @@ fi
 
 echo "running entrypoint command(s)"
 
-helm ${ARGUMENTS} -n${NAMESPACE} |awk '{print $9}' > helm-${NAMESPACE}.txt
+helm ${ARGUMENTS} -n${NAMESPACE} | grep paraflow-model |awk '{print $9}' > helm-${NAMESPACE}.txt
