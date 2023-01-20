@@ -24,4 +24,4 @@ fi
 
 echo "running entrypoint command(s)"
 
-helm ${ARGUMENTS} -n${NAMESPACE} |awk '{print $9}' > helm-dev.txt
+helm ${ARGUMENTS} -n${NAMESPACE} |awk '{print $9}' > helm-${NAMESPACE}.txt
