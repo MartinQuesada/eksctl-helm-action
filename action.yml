@@ -16,6 +16,9 @@ inputs:
     cluster-name:
         description: 'EKS cluster name.'
         required: true
+    command:
+        description: "Your command (kubectl or helm)"
+        required: true
 outputs:
   result:
     description: "Output returned by your Helm or kubectl command"
