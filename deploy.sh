@@ -24,6 +24,8 @@ fi
 
 echo "running entrypoint command(s)"
 
-response=$(eval "$INPUT_COMMAND")
+ps_cmd() {
+    $INPUT_COMMAND
+}
 
-echo "response=$response" >> $GITHUB_ENV
+ps_cmd
